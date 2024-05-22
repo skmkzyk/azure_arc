@@ -94,6 +94,7 @@ resource networkInterface 'Microsoft.Network/networkInterfaces@2021-03-01' = {
         }
       }
     ]
+    enableAcceleratedNetworking: true
   }
 }
 
