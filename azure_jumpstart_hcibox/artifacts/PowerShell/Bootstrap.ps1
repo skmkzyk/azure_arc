@@ -157,9 +157,9 @@ Enable-WSManCredSSP -Role Client -DelegateComputer $Env:COMPUTERNAME -Force | Ou
 
 # Creating scheduled task for HCIBoxLogonScript.ps1
 Write-Host "Creating scheduled task for HCIBoxLogonScript.ps1"
-$Trigger = New-ScheduledTaskTrigger -AtLogOn
-$Action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument $HCIPath\HCIBoxLogonScript.ps1
-Register-ScheduledTask -TaskName "HCIBoxLogonScript" -Trigger $Trigger -User $adminUsername -Action $Action -RunLevel "Highest" -Force
+# $Trigger = New-ScheduledTaskTrigger -AtLogOn
+# $Action = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument $HCIPath\HCIBoxLogonScript.ps1
+# Register-ScheduledTask -TaskName "HCIBoxLogonScript" -Trigger $Trigger -User $adminUsername -Action $Action -RunLevel "Highest" -Force
 
 # Disable Edge 'First Run' Setup
 Write-Host "Configuring Microsoft Edge."
